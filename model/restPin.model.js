@@ -1,5 +1,5 @@
 //const { token } = require("morgan");
-const { ResetPinSchema } = require("./RestPin.schema");
+const { ResetPinSchema } = require("./restPin.Schema");
 
 const { randomPinNumber } = require("../utils/randomGenerator");
 const { getUserByEmail } = require("./user.model");

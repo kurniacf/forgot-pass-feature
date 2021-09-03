@@ -8,7 +8,7 @@ const {userAuthor} = require("../middlewares/auth.middleware");
 const { setPasswordRestPin, getPinByEmailPin, deletePin, updateDBPin } = require("../model/restPin.model");
 const { emailProcessor } = require("../helpers/email");
 const { resetPassReqValidation, updatePassReqValidation } = require("../middlewares/formValidation.middleware");
-//const { ResetPinSchema } = require("../model/RestPin.schema");
+//const { ResetPinSchema } = require("../model/restPin.schema");
 
 router.all("/", (req, res, next)=>{
     //res.json({message: "form user router"});
