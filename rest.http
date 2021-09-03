@@ -1,0 +1,36 @@
+### Endpoint User Sign Up
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "name": "Xportee", 
+    "email": "devxportee@gmail.com",
+    "password": "Admin12345"
+}
+
+### Enpoint User Sign In
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{
+    "email": "devxportee@gmail.com",
+    "password": "@Xportee2021"
+}
+
+### Password Reset Endpoints
+POST http://localhost:5000/user/reset-password
+Content-Type: application/json
+
+{ 
+    "email": "devxportee@gmail.com"
+}
+
+### Update New Password Endpoints
+PATCH  http://localhost:5000/user/reset-password
+Content-Type: application/json
+
+{ 
+    "email": "devxportee@gmail.com",
+    "pin": "7750",
+    "newPassword": "@Xportee2021"
+}
