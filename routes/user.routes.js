@@ -17,7 +17,6 @@ router.all("/", (req, res, next)=>{
 
 // Get User Profile Router
 router.get("/", userAuthor, async (req, res)=>{
-    res.send("Hello World");
     const _id = req.userId;
     const userProof = await getUserById(_id)
     res.json({user: userProof});
@@ -25,7 +24,6 @@ router.get("/", userAuthor, async (req, res)=>{
 
 // Create New User
 router.post("/", async(req, res)=>{
-    res.send("Hello World");
     const {name, email, password} = req.body;
     try {
         // hash password
