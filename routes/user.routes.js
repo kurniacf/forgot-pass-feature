@@ -24,12 +24,11 @@ router.get("/", userAuthor, async (req, res)=>{
 
 // Create New User
 router.post("/", async(req, res)=>{
-    const {name, email, password} = req.body;
+    const {email, password} = req.body;
     try {
         // hash password
         const hashedPass = await hashPassword(password);
         const newUserObj = {
-            name, 
             email, 
             password: hashedPass,
         };
