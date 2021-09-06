@@ -9,7 +9,7 @@ const setPasswordRestPin = async (email) => {
     const pinLength = 4;
     const randPin = await randomPinNumber(pinLength);
 
-    const emailOld = getUserByEmail(email);
+    //const emailOld = getUserByEmail(email);
 
     const restObj = {
         email,

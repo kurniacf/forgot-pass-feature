@@ -104,11 +104,12 @@ router.post("/reset-password", resetPassReqValidation, async (req, res)=>{
         // });
         //updateDBPin(email, setPin.pin);
         
-        
+        $sendPin = setPin.pin;
 
         return res.json({
             status: "Success", 
-            message: "If the email is exist in our database, the password reset pin will be sent shortly"
+            message: `If the email is exist in our database, the password reset pin will be sent shortly`,
+            $sendPin
         });
         
     }

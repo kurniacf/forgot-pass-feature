@@ -22,7 +22,7 @@ POST http://localhost:5000/user/reset-password
 Content-Type: application/json
 
 { 
-    "email": "devxportee@gmail.com"
+    "email": "darkpotato171717@gmail.com"
 }
 
 ### Update New Password Endpoints
@@ -30,7 +30,7 @@ PATCH  http://localhost:5000/user/reset-password
 Content-Type: application/json
 
 { 
-    "email": "devxportee@gmail.com",
-    "pin": "7750",
+    "email": "darkpotato171717@gmail.com",
+    "pin": "7033",
     "newPassword": "@Xportee2021"
 }
