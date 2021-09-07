@@ -9,6 +9,14 @@ const email = Joi.string().email({
 const pin = Joi.string().min(4).max(4);
 // const newPassword = Joi.string().min(8).max(30).required();
 
+const complexityOptions = {
+    min: 8,
+    max: 30,
+    lowerCase: 1,
+    upperCase: 1,
+    numeric: 1,
+    requirementCount: 2,
+};
 
 const resetPassReqValidation = (req, res, next) => {
     const schema = Joi.object({email})
@@ -20,7 +28,7 @@ const resetPassReqValidation = (req, res, next) => {
 };
 
 const updatePassReqValidation = (req, res, next) => {
-    const schema = Joi.object({email, pin, newPassword: passwordComplexity().required()})
+    const schema = Joi.object({email, pin, newPassword: passwordComplexity(complexityOptions).required()})
     const value = schema.validate(req.body)
     if(value.error){
         return res.json({status: "Error", message: value.error.message});
