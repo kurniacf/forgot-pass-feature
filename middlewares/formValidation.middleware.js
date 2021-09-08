@@ -14,8 +14,7 @@ const complexityOptions = {
     max: 30,
     lowerCase: 1,
     upperCase: 1,
-    numeric: 1,
-    requirementCount: 2,
+    numeric: 1
 };
 
 const resetPassReqValidation = (req, res, next) => {
