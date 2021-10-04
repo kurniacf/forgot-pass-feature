@@ -1,5 +1,5 @@
 ---
 deployment
     tasks:
-      - export DEPLOYPATH=/home/xporteec/repositories/forgotpass
+      - export DEPLOYPATH=/address
       - /bin/cp app.js $DEPLOYPATH
