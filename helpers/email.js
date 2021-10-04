@@ -28,7 +28,7 @@ const emailProcessor = async({email, pin, type})=>{
     switch (type) {
         case "request-new-password":
             info = {
-                from: '"devxportee@gmail.com', // sender address
+                from: '"', // sender address
                 to: email, // list of receivers
                 subject: "Password Reset", // Subject line
                 text: `Here is your pin <b>${pin}</b>`, // plain text body
@@ -38,7 +38,7 @@ const emailProcessor = async({email, pin, type})=>{
             break;
         case "update-password-success":
             info = {
-                from: '"devxportee@gmail.com', // sender address
+                from: '"', // sender address
                 to: email, // list of receivers
                 subject: "Password Update", // Subject line
                 text: `Your password has been Update`, // plain text body
